@@ -168,9 +168,13 @@ void playGame(int board_size, int connect_length, int start_player, char popout)
             }//end while
             printf("debug statement 2\n");
             dropDiscAtColumn(board_size, board_size, board, dropCol, currentPlayer);
-            printBoard(board_size, board_size, board);
-            nextPlayer(currentPlayer);
+            if(currentPlayer == 1){
+                currentPlayer = 2;
+            }else{
+                currentPlayer =1;
+            }
             turn++;
+            printBoard(board_size, board_size, board);
 
 	    }
 
